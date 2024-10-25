@@ -1,0 +1,396 @@
+{
+	"info": {
+		"_postman_id": "24e7019c-056d-4a4e-9db3-58c0bcff7ede",
+		"name": "LMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "UserRegister",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\":\"samiksha\",\r\n\t \"email\":\"samiksha32@gmail.com\",\r\n\t \"password\":\"samiksha\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8070/api/v1.0/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1.0",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCourseByCourseName",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8070/api/v1.0/lms/courses/Delete/C++ general-purpose programming",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1.0",
+								"lms",
+								"courses",
+								"Delete",
+								"C++ general-purpose programming"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCoursesInfoByTechnology",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8070/api/v1.0/lms/courses/info/c++",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1.0",
+								"lms",
+								"courses",
+								"info",
+								"c++"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AllCoursesInfo",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getByDurationRange",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8070/api/v1.0/lms/courses/get/c/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8070",
+							"path": [
+								"api",
+								"v1.0",
+								"lms",
+								"courses",
+								"get",
+								"c",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "saveCourse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"courseName\": \"C++ general-purpose programming\",\r\n  \"courseDuration\": \"22.5\",\r\n  \"courseDescription\": \"C++ is a general-purpose programming language created by Danish computer scientist Bjarne Stroustrup as an extension of the C programming language, or C with Classes\",\r\n  \"technology\": \"C++\",\r\n  \"launchUrl\": \"http://www.javatech.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/v1.0/lms/Course/saveCourse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1.0",
+								"lms",
+								"Course",
+								"saveCourse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCourse",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"courseName\": \"Angular 8\",\r\n  \"courseDuration\": 10,\r\n  \"courseDescription\": \"Angular is a TypeScript-based free and open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS\",\r\n  \"technology\": \"Angular\",\r\n  \"launchUrl\": \"https://angular.io/\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/v1.0/lms/Course/updateCourse/23",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1.0",
+								"lms",
+								"Course",
+								"updateCourse",
+								"23"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AllCourse",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/v1.0/lms/Course/AllCourse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1.0",
+								"lms",
+								"Course",
+								"AllCourse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCourseByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/v1.0/lms/Course/DeleteCourseBy/17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1.0",
+								"lms",
+								"Course",
+								"DeleteCourseBy",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CourseByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/v1.0/lms/Course/CourseBy/18 ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1.0",
+								"lms",
+								"Course",
+								"CourseBy",
+								"18 "
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCourseByTechnology",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/v1.0/lms/Course/getCourseByTechnology/C++",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"v1.0",
+								"lms",
+								"Course",
+								"getCourseByTechnology",
+								"C++"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ZuulUserApiCall",
+			"item": [
+				{
+					"name": "GetByTechnology",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ctsjava1373.iiht.tech:8787/learning-management-system-user/api/v1.0/lms/courses/info/C++",
+							"protocol": "http",
+							"host": [
+								"ctsjava1373",
+								"iiht",
+								"tech"
+							],
+							"port": "8787",
+							"path": [
+								"learning-management-system-user",
+								"api",
+								"v1.0",
+								"lms",
+								"courses",
+								"info",
+								"C++"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ZuulApiCallAdmin",
+			"item": [
+				{
+					"name": "ZullApiCallAdminGetAllCourses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ctsjava1373.iiht.tech:8787/learning-management-system-admin/api/v1.0/lms/Course/AllCourse",
+							"protocol": "http",
+							"host": [
+								"ctsjava1373",
+								"iiht",
+								"tech"
+							],
+							"port": "8787",
+							"path": [
+								"learning-management-system-admin",
+								"api",
+								"v1.0",
+								"lms",
+								"Course",
+								"AllCourse"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "SaveCourse",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n    \"courseName\": \"python general-purpose programming\",\r\n    \"courseDuration\": 2.5,\r\n    \"courseDescription\": \"Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Python is dynamically-typed and garbage-collected. \",\r\n    \"technology\": \"Python\",\r\n    \"launchUrl\": \"http://www.pythontech.com\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ctsjava1373.iiht.tech:8787/learning-management-system-admin/api/v1.0/lms/Course/saveCourse",
+							"protocol": "http",
+							"host": [
+								"ctsjava1373",
+								"iiht",
+								"tech"
+							],
+							"port": "8787",
+							"path": [
+								"learning-management-system-admin",
+								"api",
+								"v1.0",
+								"lms",
+								"Course",
+								"saveCourse"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
